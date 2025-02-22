@@ -1,0 +1,165 @@
+/* Light Mode */
+:root {
+  --background-color: white;
+  --text-color: black;
+  --form-bg: #f0f0f0;
+  --form-border: #ccc;
+  --form-color: black;
+  --button-bg: #e0e0e0;
+  --button-text: black;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+  color: var(--form-color);
+  background-color: var(--form-bg);
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background-color: var(--form-bg);
+  border: 1px solid var(--form-border);
+  border-radius: 8px;
+}
+
+form label {
+  font-weight: bold;
+  color: var(--form-color);
+}
+
+form input,
+form select,
+form button {
+  padding: 10px;
+  border: 1px solid var(--form-border);
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+ul li {
+  padding: 5px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table th,
+table td {
+  border: 1px solid var(--form-border);
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: var(--form-bg);
+  font-weight: bold;
+}
+
+details {
+  margin: 10px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: var(--form-bg);
+  margin-top: 30px;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: black;
+    --text-color: white;
+    --form-color: white;
+    --form-bg: #1e1e1e;
+    --form-border: #555;
+    --button-bg: #333;
+    --button-text: white;
+  }
+}
+
+/* High Contrast */
+.high-contrast {
+  --background-color: yellow;
+  --text-color: black;
+  --form-bg: black;
+  --form-border: yellow;
+  --form-color: yellow;
+  --button-bg: yellow;
+  --button-text: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #theme-controls {
+    flex-direction: column;
+  }
+
+  form {
+    padding: 10px;
+  }
+
+  table th,
+  table td {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  #theme-controls button {
+    padding: 8px 15px;
+  }
+
+  form label,
+  form input,
+  form button {
+    font-size: 0.9rem;
+  }
+}
